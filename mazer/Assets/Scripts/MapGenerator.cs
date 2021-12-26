@@ -4,14 +4,14 @@ using UnityEngine;
 using System;
 
 public class MapGenerator : MonoBehaviour {
-	public int width;
-	public int height;
+	public int width = 100;
+	public int height = 70;
 	public int smoothMapFactor = 5;
-	public int scaleMapFactor = 1;
-	public int mapBorderSize = 1; // the border extends outside the map width & height
+	public int scaleMapFactor = 10;
+	public int mapBorderSize = 2; // the border extends outside the map width & height
 
 	public string seed;
-	public bool useRandomSeed;
+	public bool useRandomSeed = true;
 
 	[Range (0, 100)]
 	public int randomFillPercent;
