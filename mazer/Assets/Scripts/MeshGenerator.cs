@@ -50,6 +50,10 @@ public class MeshGenerator : MonoBehaviour {
 
     void CreateWallMesh ()
     {
+        MeshCollider [] currentColliders = walls.gameObject.GetComponents<MeshCollider> ();
+        for (int i = 0; i < currentColliders.Length; i++) {
+            Destroy (currentColliders [i]);
+        }
 
         CalculateMeshOutlines ();
 
@@ -89,7 +93,6 @@ public class MeshGenerator : MonoBehaviour {
         for (int i = 0; i < currentColliders.Length; i++) {
             Destroy (currentColliders [i]);
         }
-
 
         CalculateMeshOutlines ();
 
